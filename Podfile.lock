@@ -1,10 +1,22 @@
 PODS:
-  - BlocksKit (1.8.2):
-    - libffi
-  - HexColors (2.0.0)
-  - libffi (3.0.13)
-  - SVProgressHUD (0.9)
-  - TransitionKit (1.1.1)
+  - BlocksKit (2.2.2):
+    - BlocksKit/All
+  - BlocksKit/All (2.2.2):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.2)
+  - BlocksKit/DynamicDelegate (2.2.2)
+  - BlocksKit/MessageUI (2.2.2):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.2):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - HexColors (2.2.1)
+  - SVProgressHUD (1.0)
+  - TransitionKit (2.1.0)
 
 DEPENDENCIES:
   - BlocksKit
@@ -13,10 +25,9 @@ DEPENDENCIES:
   - TransitionKit
 
 SPEC CHECKSUMS:
-  BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
-  HexColors: 24cee4b04d7b2b0922b93a3acf7739a25ae227e7
-  libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
-  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
-  TransitionKit: d0e3344aac92991395d4c2e72d9c5a8ceeb12910
+  BlocksKit: 125e4e69a62e3b85bacc5175737dae000b00b9fb
+  HexColors: 99211502e17904af7891fc8f687d0e4958a6d66e
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
+  TransitionKit: 60b6a2cd9370e471c960b2cdf23b0b2593867625
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
