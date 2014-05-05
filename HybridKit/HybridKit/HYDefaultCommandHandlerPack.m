@@ -14,8 +14,11 @@
 @implementation HYDefaultCommandHandlerPack
 -(void)handleCommandString:(NSString *)commandString dictionary:(NSDictionary *)commandDictionary {
     if ([commandString isEqualToString:@"alert"]) {
-        UIAlertView *alertView = [UIAlertView alertViewWithTitle:commandDictionary[@"title"] message:commandDictionary[@"message"]];
-        [alertView setCancelButtonWithTitle:commandDictionary[@"cancel_button_title"] ? commandDictionary[@"cancel_button_title"] : @"OK" handler:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:commandDictionary[@"title"]
+                                                            message:commandDictionary[@"message"]
+                                                           delegate:nil
+                                                  cancelButtonTitle:commandDictionary[@"cancel_button_title"] ? commandDictionary[@"cancel_button_title"] : @"OK"
+                                                  otherButtonTitles:nil];
         [alertView show];
     }
 
@@ -66,7 +69,7 @@
 
 - (BOOL)respondsToCommandString:(NSString *)commandString {
     NSArray *commandArray = @[@"alert", @"open_url", @"set_url", @"set_url_refresh", @"set_title", @"set_scroll_enabled", @"set_background_color", @"deceleration_rate", @"trigger_event", @"javascript"];
-    
+
     return [commandArray containsObject:commandString];
 }
 
